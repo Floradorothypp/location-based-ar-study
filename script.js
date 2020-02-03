@@ -17,7 +17,7 @@ function staticLoadPlaces(){
 
 function renderPlaces(places){
 	let scene = document.querySelector('a-scene');
-	places.forEach(place) => {
+	places.forEach((place) => {
 		let latitude = place.location.lat;
 		let longitude = place.location.lng;
 		let model = document.createElement('a-entity');
@@ -31,5 +31,5 @@ function renderPlaces(places){
         	window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'));
         });
         scene.appendChild(model);
-	}
+	});
 }
